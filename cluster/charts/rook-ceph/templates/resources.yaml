@@ -107,7 +107,6 @@ spec:
                   description: Parameters is a list of properties to enable on a given pool
                   nullable: true
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 quotas:
                   description: The quota settings
                   nullable: true
@@ -164,7 +163,6 @@ spec:
                           type: string
                       type: object
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
               type: object
             status:
               description: CephBlockPoolStatus represents the mirroring status of Ceph Storage Pool
@@ -312,7 +310,6 @@ spec:
                       type: array
                   type: object
               type: object
-              x-kubernetes-preserve-unknown-fields: true
           required:
             - metadata
             - spec
@@ -365,7 +362,6 @@ spec:
                   additionalProperties:
                     type: string
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 name:
                   type: string
               required:
@@ -383,7 +379,6 @@ spec:
                   description: ConditionType represent a resource's status
                   type: string
               type: object
-              x-kubernetes-preserve-unknown-fields: true
           required:
             - metadata
             - spec
@@ -468,7 +463,6 @@ spec:
                   description: The annotations-related configuration to add/set on each Pod related object.
                   nullable: true
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 cephVersion:
                   description: The version information that instructs Rook to orchestrate a particular version of Ceph.
                   nullable: true
@@ -583,7 +577,6 @@ spec:
                       description: Enable determines whether external mode is enabled or not
                       type: boolean
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 healthCheck:
                   description: Internal daemon healthchecks and liveness probe
                   nullable: true
@@ -734,7 +727,6 @@ spec:
                   description: The labels-related configuration to add/set on each Pod related object.
                   nullable: true
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 logCollector:
                   description: Logging represents loggings settings
                   nullable: true
@@ -970,7 +962,6 @@ spec:
                                         type: string
                                     type: object
                                 type: object
-                                x-kubernetes-preserve-unknown-fields: true
                             type: object
                           nullable: true
                           type: array
@@ -1141,7 +1132,6 @@ spec:
                               type: string
                           type: object
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                   required:
                     - count
                   type: object
@@ -1234,7 +1224,6 @@ spec:
                       nullable: true
                       type: object
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 placement:
                   additionalProperties:
                     description: Placement is the placement for an object
@@ -1654,14 +1643,12 @@ spec:
                   description: The placement-related configuration to pass to kubernetes (affinity, node selector, tolerations).
                   nullable: true
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 priorityClassNames:
                   additionalProperties:
                     type: string
                   description: PriorityClassNames sets priority classes on components
                   nullable: true
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 removeOSDsIfOutAndSafeToRemove:
                   description: Remove the OSD that is out and safe to remove only if this option is true
                   type: boolean
@@ -1691,7 +1678,6 @@ spec:
                   description: Resources set resource requests and limits
                   nullable: true
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 security:
                   description: Security represents security settings
                   nullable: true
@@ -1706,7 +1692,6 @@ spec:
                           description: ConnectionDetails contains the KMS connection details (address, port etc)
                           nullable: true
                           type: object
-                          x-kubernetes-preserve-unknown-fields: true
                         tokenSecretName:
                           description: TokenSecretName is the kubernetes secret containing the KMS token
                           type: string
@@ -1724,7 +1709,6 @@ spec:
                         type: string
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     deviceFilter:
                       description: A regular expression to allow more fine-grained selection of devices on nodes across the cluster
                       type: string
@@ -1740,7 +1724,6 @@ spec:
                             additionalProperties:
                               type: string
                             type: object
-                            x-kubernetes-preserve-unknown-fields: true
                           fullpath:
                             type: string
                           name:
@@ -1748,7 +1731,6 @@ spec:
                         type: object
                       nullable: true
                       type: array
-                      x-kubernetes-preserve-unknown-fields: true
                     nodes:
                       items:
                         description: Node is a storage nodes
@@ -1758,7 +1740,6 @@ spec:
                               type: string
                             nullable: true
                             type: object
-                            x-kubernetes-preserve-unknown-fields: true
                           deviceFilter:
                             description: A regular expression to allow more fine-grained selection of devices on nodes across the cluster
                             type: string
@@ -1774,7 +1755,6 @@ spec:
                                   additionalProperties:
                                     type: string
                                   type: object
-                                  x-kubernetes-preserve-unknown-fields: true
                                 fullpath:
                                   type: string
                                 name:
@@ -1782,7 +1762,6 @@ spec:
                               type: object
                             nullable: true
                             type: array
-                            x-kubernetes-preserve-unknown-fields: true
                           name:
                             type: string
                           resources:
@@ -1808,7 +1787,6 @@ spec:
                                 description: 'Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/'
                                 type: object
                             type: object
-                            x-kubernetes-preserve-unknown-fields: true
                           useAllDevices:
                             description: Whether to consume all the storage devices found on a machine
                             type: boolean
@@ -1994,7 +1972,6 @@ spec:
                             description: Provider-specific device configuration
                             nullable: true
                             type: object
-                            x-kubernetes-preserve-unknown-fields: true
                           count:
                             description: Count is the number of devices in this set
                             minimum: 1
@@ -2421,7 +2398,6 @@ spec:
                                   type: object
                                 type: array
                             type: object
-                            x-kubernetes-preserve-unknown-fields: true
                           portable:
                             description: Portable represents OSD portability across the hosts
                             type: boolean
@@ -2841,7 +2817,6 @@ spec:
                                   type: object
                                 type: array
                             type: object
-                            x-kubernetes-preserve-unknown-fields: true
                           resources:
                             description: ResourceRequirements describes the compute resource requirements.
                             nullable: true
@@ -2865,7 +2840,6 @@ spec:
                                 description: 'Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/'
                                 type: object
                             type: object
-                            x-kubernetes-preserve-unknown-fields: true
                           schedulerName:
                             description: Scheduler name for OSD pod placement
                             type: string
@@ -2893,7 +2867,6 @@ spec:
                                       additionalProperties:
                                         type: string
                                       type: object
-                                      x-kubernetes-preserve-unknown-fields: true
                                     finalizers:
                                       items:
                                         type: string
@@ -3371,7 +3344,6 @@ spec:
                       type: string
                   type: object
               type: object
-              x-kubernetes-preserve-unknown-fields: true
           required:
             - metadata
             - spec
@@ -4019,7 +3991,6 @@ spec:
                         description: Parameters is a list of properties to enable on a given pool
                         nullable: true
                         type: object
-                        x-kubernetes-preserve-unknown-fields: true
                       quotas:
                         description: The quota settings
                         nullable: true
@@ -4076,7 +4047,6 @@ spec:
                                 type: string
                             type: object
                         type: object
-                        x-kubernetes-preserve-unknown-fields: true
                     type: object
                   nullable: true
                   type: array
@@ -4158,7 +4128,6 @@ spec:
                       description: Parameters is a list of properties to enable on a given pool
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     quotas:
                       description: The quota settings
                       nullable: true
@@ -4215,7 +4184,6 @@ spec:
                               type: string
                           type: object
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                   type: object
                 metadataServer:
                   description: The mds pod info
@@ -4235,14 +4203,12 @@ spec:
                       description: The annotations-related configuration to add/set on each Pod related object.
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     labels:
                       additionalProperties:
                         type: string
                       description: The labels-related configuration to add/set on each Pod related object.
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     placement:
                       description: The affinity to place the mds pods (default is to place on all available node) with a daemonset
                       nullable: true
@@ -4659,7 +4625,6 @@ spec:
                             type: object
                           type: array
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     priorityClassName:
                       description: PriorityClassName sets priority classes on components
                       type: string
@@ -4686,7 +4651,6 @@ spec:
                           description: 'Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/'
                           type: object
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                   required:
                     - activeCount
                   type: object
@@ -4715,7 +4679,6 @@ spec:
                 phase:
                   type: string
               type: object
-              x-kubernetes-preserve-unknown-fields: true
           required:
             - metadata
             - spec
@@ -4791,14 +4754,12 @@ spec:
                       description: The annotations-related configuration to add/set on each Pod related object.
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     labels:
                       additionalProperties:
                         type: string
                       description: The labels-related configuration to add/set on each Pod related object.
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     logLevel:
                       description: LogLevel set logging level
                       type: string
@@ -5218,7 +5179,6 @@ spec:
                             type: object
                           type: array
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     priorityClassName:
                       description: PriorityClassName sets the priority class on the pods
                       type: string
@@ -5245,7 +5205,6 @@ spec:
                           description: 'Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/'
                           type: object
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                   required:
                     - active
                   type: object
@@ -5259,7 +5218,6 @@ spec:
                 phase:
                   type: string
               type: object
-              x-kubernetes-preserve-unknown-fields: true
           required:
             - metadata
             - spec
@@ -5326,7 +5284,6 @@ spec:
                 phase:
                   type: string
               type: object
-              x-kubernetes-preserve-unknown-fields: true
           required:
             - metadata
           type: object
@@ -5452,7 +5409,6 @@ spec:
                       description: Parameters is a list of properties to enable on a given pool
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     quotas:
                       description: The quota settings
                       nullable: true
@@ -5509,7 +5465,6 @@ spec:
                               type: string
                           type: object
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                   type: object
                 gateway:
                   description: The rgw pod info
@@ -5521,7 +5476,6 @@ spec:
                       description: The annotations-related configuration to add/set on each Pod related object.
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     externalRgwEndpoints:
                       description: ExternalRgwEndpoints points to external rgw endpoint(s)
                       items:
@@ -5577,7 +5531,6 @@ spec:
                       description: The labels-related configuration to add/set on each Pod related object.
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     placement:
                       description: The affinity to place the rgw pods (default is to place on any available node)
                       nullable: true
@@ -5994,7 +5947,6 @@ spec:
                             type: object
                           type: array
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     port:
                       description: The port the rgw service will be listening on (http)
                       format: int32
@@ -6025,7 +5977,6 @@ spec:
                           description: 'Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/'
                           type: object
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     securePort:
                       description: The port the rgw service will be listening on (https)
                       format: int32
@@ -6236,7 +6187,6 @@ spec:
                       description: Parameters is a list of properties to enable on a given pool
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     quotas:
                       description: The quota settings
                       nullable: true
@@ -6293,7 +6243,6 @@ spec:
                               type: string
                           type: object
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                   type: object
                 preservePoolsOnDelete:
                   description: Preserve pools on object store deletion
@@ -6312,7 +6261,6 @@ spec:
                           description: ConnectionDetails contains the KMS connection details (address, port etc)
                           nullable: true
                           type: object
-                          x-kubernetes-preserve-unknown-fields: true
                         tokenSecretName:
                           description: TokenSecretName is the kubernetes secret containing the KMS token
                           type: string
@@ -6356,7 +6304,6 @@ spec:
                   description: ConditionType represent a resource's status
                   type: string
               type: object
-              x-kubernetes-preserve-unknown-fields: true
           required:
             - metadata
             - spec
@@ -6426,7 +6373,6 @@ spec:
                 phase:
                   type: string
               type: object
-              x-kubernetes-preserve-unknown-fields: true
           required:
             - metadata
             - spec
@@ -6487,7 +6433,6 @@ spec:
                 phase:
                   type: string
               type: object
-              x-kubernetes-preserve-unknown-fields: true
           required:
             - metadata
             - spec
@@ -6614,7 +6559,6 @@ spec:
                       description: Parameters is a list of properties to enable on a given pool
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     quotas:
                       description: The quota settings
                       nullable: true
@@ -6671,7 +6615,6 @@ spec:
                               type: string
                           type: object
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                   type: object
                 metadataPool:
                   description: The metadata pool settings
@@ -6751,7 +6694,6 @@ spec:
                       description: Parameters is a list of properties to enable on a given pool
                       nullable: true
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                     quotas:
                       description: The quota settings
                       nullable: true
@@ -6808,7 +6750,6 @@ spec:
                               type: string
                           type: object
                       type: object
-                      x-kubernetes-preserve-unknown-fields: true
                   type: object
                 zoneGroup:
                   description: The display name for the ceph users
@@ -6824,7 +6765,6 @@ spec:
                 phase:
                   type: string
               type: object
-              x-kubernetes-preserve-unknown-fields: true
           required:
             - metadata
             - spec
@@ -6879,7 +6819,6 @@ spec:
                   description: The annotations-related configuration to add/set on each Pod related object.
                   nullable: true
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 count:
                   description: Count represents the number of rbd mirror instance to run
                   minimum: 1
@@ -6890,7 +6829,6 @@ spec:
                   description: The labels-related configuration to add/set on each Pod related object.
                   nullable: true
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 peers:
                   description: RBDMirroringPeerSpec represents the peers spec
                   nullable: true
@@ -7317,7 +7255,6 @@ spec:
                         type: object
                       type: array
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
                 priorityClassName:
                   description: PriorityClassName sets priority class on the rbd mirror pods
                   type: string
@@ -7344,7 +7281,6 @@ spec:
                       description: 'Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/'
                       type: object
                   type: object
-                  x-kubernetes-preserve-unknown-fields: true
               required:
                 - count
               type: object
@@ -7354,7 +7290,6 @@ spec:
                 phase:
                   type: string
               type: object
-              x-kubernetes-preserve-unknown-fields: true
           required:
             - metadata
             - spec
@@ -7407,12 +7342,10 @@ spec:
                 additionalConfig:
                   type: object
                   nullable: true
-                  x-kubernetes-preserve-unknown-fields: true
                 objectBucketName:
                   type: string
             status:
               type: object
-              x-kubernetes-preserve-unknown-fields: true
       subresources:
         status: {}
 ---
@@ -7464,26 +7397,21 @@ spec:
                     additionalConfig:
                       type: object
                       nullable: true
-                      x-kubernetes-preserve-unknown-fields: true
                 authentication:
                   type: object
                   nullable: true
                   items:
                     type: object
-                    x-kubernetes-preserve-unknown-fields: true
                 additionalState:
                   type: object
                   nullable: true
-                  x-kubernetes-preserve-unknown-fields: true
                 reclaimPolicy:
                   type: string
                 claimRef:
                   type: object
                   nullable: true
-                  x-kubernetes-preserve-unknown-fields: true
             status:
               type: object
-              x-kubernetes-preserve-unknown-fields: true
       subresources:
         status: {}
 ---
